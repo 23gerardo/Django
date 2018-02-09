@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{% block title %} Documento {% endblock %} </title>
 	<link rel="stylesheet" href="">
+{%block extrahead%}
+{% endblock %}
+
+
 </head>
 <body>
 	{% block header %}
@@ -17,7 +22,10 @@
 
 	{% block footer %}
 	<h4>soy el footer del base</h4>
-	{% endblock %}		
+	{% endblock %}	
+
+	{%block extrajs%}
+	{% endblock %}	
 
 </body>
 </html>
