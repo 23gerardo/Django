@@ -16,8 +16,10 @@ Including another URLconf
 from django.urls import path
 from django.conf.urls import url, include
 from django.contrib import admin
+
 from django.contrib.auth.views import login, logout_then_login, password_reset, password_reset_done, password_reset_confirm, password_reset_complete
 
+app_name = "mascota"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,3 +27,4 @@ urlpatterns = [
     url(r'^adopcion/', include ('apps.adopcion.urls')),
 
 ]
+
