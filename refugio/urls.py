@@ -19,11 +19,11 @@ from django.contrib import admin
 
 from django.contrib.auth.views import login, logout_then_login, password_reset, password_reset_done, password_reset_confirm, password_reset_complete
 
-app_name = "mascota"
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^mascota/', include('apps.mascota.urls')),
+    url(r'^mascota/', include('apps.mascota.urls',namespace='mascota')),
     url(r'^adopcion/', include ('apps.adopcion.urls')),
 
 ]
