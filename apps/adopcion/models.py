@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 # Create your models here.
 
 class Persona(models.Model):
@@ -14,4 +15,7 @@ class Persona(models.Model):
 	def __str__(self):
 		return '{}{}'.format(self.nombre,self.apellidos)
 
-
+class Solicitud(models.Model):
+	persona = models.ForeignKey(Persona,on_delete=models.CASCADE, null=True, blank=True)
+	numero_mascotas = models.IntegerField()
+	razones = models.TextField()

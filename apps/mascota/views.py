@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from apps.mascota.forms import MascotaForm
 from apps.mascota.models import Mascota
-from django.views.generic import ListView,CreateView,UpdateView,DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 # Create your views here.
