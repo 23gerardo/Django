@@ -24,7 +24,7 @@ from django.contrib.auth.views import login, logout_then_login, password_reset, 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^mascota/', include('apps.mascota.urls',namespace='mascota')),
-    url(r'^adopcion/', include ('apps.adopcion.urls')),
+    url(r'^adopcion/', include ('apps.adopcion.urls',namespace='solicitud')),
 
 ]
 
